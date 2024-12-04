@@ -131,6 +131,9 @@ export default function Home() {
   return (
     <>
       <Image src={background} alt="Logo" />
+      <h1 className="text-6xl font-bold mt-24 text-center text-red-500">
+        Kiinan kansallispäivä
+      </h1>
       <section
         id="about"
         className="about my-24 w-full select-none scroll-m-10"
