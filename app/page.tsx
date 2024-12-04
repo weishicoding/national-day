@@ -417,7 +417,7 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-3xl font-semibold text-center mb-12">
-              Pelaan peli🎮
+              Pelaan peliä🎮
             </h2>
             <Image
               src="/images/IMG_0888.JPG"
