@@ -218,7 +218,7 @@ export default function Home() {
 
             <div className="relative col-span-2 hidden md:block">
               <Image
-                src="/images/2022021516449206312341.png"
+                src="/images/IMG_0871.JPG"
                 alt=""
                 loading="lazy"
                 fill
@@ -347,7 +347,7 @@ export default function Home() {
             <br />
             <br />
             <br />
-            Juhla- ja lomapäivinä kaikkialla on paljon ihmisiä.
+            Juhla- ja lomapäivinä kaikkialla on paljon ihmisiä ja autoa.
             <br />
             <br />
             <br />
@@ -357,7 +357,7 @@ export default function Home() {
           <div className="mt-8 h-full md:w-6/12">
             <div className="grid grid-flow-row grid-cols-2 gap-8">
               <Image
-                src="/images/IMG_0883.JPG"
+                src="/images/1733338516892.JPG"
                 alt=""
                 loading="lazy"
                 width={500}
@@ -366,7 +366,7 @@ export default function Home() {
               />
 
               <Image
-                src="/images/IMG_0884.JPG"
+                src="/images/IMG_0891.JPG"
                 alt=""
                 loading="lazy"
                 width={500}
@@ -403,7 +403,9 @@ export default function Home() {
         </div>
         <div className="grid grid-flow-row grid-cols-4 gap-8 mt-12">
           <div>
-            <h2 className="text-3xl font-semibold text-center mb-12">Nukun</h2>
+            <h2 className="text-3xl font-semibold text-center mb-12">
+              Nukun💤
+            </h2>
             <Image
               src="/images/IMG_0887.JPG"
               alt=""
@@ -415,7 +417,7 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-3xl font-semibold text-center mb-12">
-              Pelaan peli
+              Pelaan peli🎮
             </h2>
             <Image
               src="/images/IMG_0888.JPG"
@@ -428,7 +430,7 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-3xl font-semibold text-center mb-12">
-              Makaan sohvalla
+              Makaan sohvalla🛋️
             </h2>
             <Image
               src="/images/IMG_0889.JPG"
@@ -443,7 +445,7 @@ export default function Home() {
 
           <div>
             <h2 className="text-3xl font-semibold text-center mb-12">
-              Katson televisiota
+              Katson televisiota📺
             </h2>
             <Image
               src="/images/IMG_0890.JPG"
@@ -475,6 +477,9 @@ export default function Home() {
           </video>
         </div>
       </section>
+      <div className="mt-20 text-sm text-center">
+        &copy; Will, {new Date().getFullYear()}
+      </div>
     </>
   );
 }
