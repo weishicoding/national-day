@@ -203,8 +203,6 @@ export default function Home() {
         </div>
 
         <div className="relative isolate mt-32">
-          <Background />
-
           <div className="flex flex-col gap-10 md:grid md:grid-cols-3 md:grid-rows-1">
             <div className="relative aspect-square md:hidden">
               <Image
@@ -482,12 +480,5 @@ export default function Home() {
         &copy; Will, {new Date().getFullYear()}
       </div>
     </>
-  );
-}
-
-function Background() {
-  return (
-    // eslint-disable-next-line tailwindcss/no-contradicting-classname
-    <div className="absolute inset-0 -z-10 -m-40 max-w-[100vw] bg-[linear-gradient(to_right,#ffffff30_1px,transparent_1px),linear-gradient(to_bottom,#ffffff30_1px,transparent_1px)] bg-[size:70px_70px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_10%,transparent_100%)]"></div>
   );
 }
