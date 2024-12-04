@@ -10,15 +10,14 @@ export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   gsap.config({ nullTargetWarn: false });
 
-  const quoteRef: MutableRefObject<HTMLDivElement | null> =
-    useRef<HTMLDivElement>(null);
-  const targetSection: MutableRefObject<HTMLDivElement | null> =
-    useRef<HTMLDivElement>(null);
+  const quoteRef = useRef<HTMLDivElement | null>(null);
+  const targetSection = useRef<HTMLDivElement | null>(null);
 
   const initAboutAnimation = (
-    quoteRef: MutableRefObject<HTMLDivElement>,
-    targetSection: MutableRefObject<HTMLDivElement>
-  ): ScrollTrigger => {
+    quoteRef: MutableRefObject<HTMLDivElement | null>,
+    targetSection: MutableRefObject<HTMLDivElement | null>
+  ): ScrollTrigger | undefined => {
+    if (!quoteRef.current || !targetSection.current) return;
     const timeline = gsap.timeline({
       defaults: { ease: Linear.easeNone, duration: 0.3 },
     });
@@ -119,13 +118,12 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (quoteRef && targetSection) {
-      // @ts-ignore
+    if (quoteRef.current && targetSection.current) {
       const aboutScrollTriggerInstance = initAboutAnimation(
         quoteRef,
         targetSection
       );
-      return aboutScrollTriggerInstance.kill;
+      return () => aboutScrollTriggerInstance?.kill(); // Cleanup function
     }
   }, [quoteRef, targetSection]);
   return (
